@@ -1,12 +1,17 @@
 language: ruby
-
 rvm:
-  - 2.2.0
-
-bundler_args: --without production
-
+- 2.2.0
+bundler_args: "--without production"
 addons:
-  postgresql: "9.3"
-
+  postgresql: '9.3'
+  code_climate:
+    repo_token: tS8wuNZ3yS0ORe6BO5oX3d8iG7dVMLkGI0H3HQD1Aim0D5/Wd1ah73sUIuV7S5bzh1xzMbuvr/fFMJMH7T8RM9Usy0k8iVKI0X6ojgg6GGcpR/7kBalnq4a+YFPniQp8HO0yegj9yTY3v2dGAJbSKYyKY/P9juWdibdq9Vj7Fxc=
 before_script:
-  - bundle exec rake db:create db:schema:load
+- bundle exec rake db:create db:schema:load
+deploy:
+  provider: ninefold
+  app_id: '13503'
+  auth_token:
+    secure: FQY2xJby88HaoAnR3uicAbBvtkEhqYifuVV/enAs1Qo3y3uCH0oUB+ZjBAo0qCLJoCW5QjIUL6H0yWM8BGgvpJSe+yeW+4MsDRxPG0nKieAt95as70AysYJCD8tBkUerWJ7C2YqHkDhT7VcV8mq5d6w/Hgrw3PHCen3XFrJSh9I=
+  on:
+    repo: ambethia/ambethia
