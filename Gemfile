@@ -12,6 +12,8 @@ gem 'devise'
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 gem 'therubyracer', :platforms => :ruby
 
+gem 'font-awesome-sass', '~> 4.3.0'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

@@ -1,0 +1,48 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+html{
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  color: #77858C;
+  background-color: #3C3E3F;
+}
+
+#container {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  height: 500px;
+  margin: -240px auto;
+}
+
+#ambethia {
+  text-align: center;
+  margin: 0 auto;
+  width: 600px;
+}
+
+#ambethia ul li {
+  text-align: center;
+  line-height: 100px;
+  width: 90px;
+  font-size: 64px;
+  list-style: none;
+  float: left;
+}
+
+#ambethia ul li a {
+  transition: color 1s, font-size 0.5s;
+}
+
+#ambethia ul li a:hover {
+  font-size: 80px;
+  color: #D3D98D;
+}
+
+a:link, a:visited, a:focus, a:hover, a:active {
+  color: #77858C;
+}
