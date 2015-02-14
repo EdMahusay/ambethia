@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
-gem 'puma'
 gem 'pg'
 
 gem 'sass-rails', '~> 5.0'
@@ -18,4 +17,9 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'quiet_assets'
   gem 'spring'
+end
+
+group :production do
+  gem 'puma'
+  gem 'newrelic_rpm'
 end
