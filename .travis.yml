@@ -5,7 +5,8 @@ bundler_args: "--without production"
 addons:
   postgresql: '9.3'
   code_climate:
-    repo_token: tS8wuNZ3yS0ORe6BO5oX3d8iG7dVMLkGI0H3HQD1Aim0D5/Wd1ah73sUIuV7S5bzh1xzMbuvr/fFMJMH7T8RM9Usy0k8iVKI0X6ojgg6GGcpR/7kBalnq4a+YFPniQp8HO0yegj9yTY3v2dGAJbSKYyKY/P9juWdibdq9Vj7Fxc=
+    repo_token:
+      secure: X5A5M6n6y4ugH37Ggkepbl5S3UTYYU+sNr5MNrL1s2iKjAdlfh2sFeymqlaW9qnNS5uYuAExqhXcBa8L7pwxpcz5UWjyfU+8y6j+WGNrT/7mxMFQdVtEQP6+YqeKFv2Q1aL012TX387H6DHMUgYgDreT7B8JAijLLDp5VcNq7+4=
 before_script:
 - bundle exec rake db:create db:schema:load
 deploy:
