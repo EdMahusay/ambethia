@@ -16,3 +16,9 @@ deploy:
     secure: FQY2xJby88HaoAnR3uicAbBvtkEhqYifuVV/enAs1Qo3y3uCH0oUB+ZjBAo0qCLJoCW5QjIUL6H0yWM8BGgvpJSe+yeW+4MsDRxPG0nKieAt95as70AysYJCD8tBkUerWJ7C2YqHkDhT7VcV8mq5d6w/Hgrw3PHCen3XFrJSh9I=
   on:
     repo: ambethia/ambethia
+after_success:
+- gem install ninefold
+- if [[ $TRAVIS_SECURE_ENV_VARS ]]; then ninefold app redeploy --robot --sure; fi
+env:
+  global:
+    secure: Zz4qS/HQE3vIYUb07zOMn4NSWo4IQjTy+QPUNDSdnOu3tiXnKTBfPObGLRaU27Tu549fTFB+1+Ot31xL9mCABL8myQWpe9nbEZu6UqhUTT1W7IuP2xAiZMd0TcV/DeSGWHf0YWUQhia9CfSbTNl2yOmNDSXsj+0PEhhGe569Gxs=
