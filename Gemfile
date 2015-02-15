@@ -13,6 +13,7 @@ gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 gem 'therubyracer', :platforms => :ruby
 
 gem 'font-awesome-sass', '~> 4.3.0'
+gem 'github-markdown'
 
 group :development, :test do
   gem 'byebug'

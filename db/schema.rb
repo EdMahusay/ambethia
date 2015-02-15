@@ -11,10 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150210043028) do
+ActiveRecord::Schema.define(version: 20150215035055) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "scrap_views", force: :cascade do |t|
+    t.integer  "scrap_id"
+    t.string   "remote_ip"
+    t.string   "user_agent"
+    t.datetime "viewed_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "scrap_views", ["scrap_id"], name: "index_scrap_views_on_scrap_id", using: :btree
+
+  create_table "scraps", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "slug"
+    t.text     "body"
+    t.integer  "expires_after"
+    t.datetime "expired_at"
+    t.string   "syntax"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "scraps", ["slug"], name: "index_scraps_on_slug", unique: true, using: :btree
+  add_index "scraps", ["user_id"], name: "index_scraps_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -34,4 +59,6 @@ ActiveRecord::Schema.define(version: 20150210043028) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "scrap_views", "scraps"
+  add_foreign_key "scraps", "users"
 end

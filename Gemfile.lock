@@ -75,6 +75,7 @@ GEM
     execjs (2.3.0)
     font-awesome-sass (4.3.1)
       sass (~> 3.2)
+    github-markdown (0.6.8)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
     hike (1.2.3)
@@ -184,6 +185,7 @@ DEPENDENCIES
   codeclimate-test-reporter
   devise
   font-awesome-sass (~> 4.3.0)
+  github-markdown
   jquery-rails
   newrelic_rpm
   pg

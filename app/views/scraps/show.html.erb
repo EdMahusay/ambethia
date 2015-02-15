@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Link:</strong>
+  <%= link_to "Public Link", public_scrap_url(@scrap.slug) %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+</p>
+
+<div id="scrap-body">
+  <%== GitHub::Markdown.render_gfm(@scrap.body) %>
+</div>
+
+<p>
+  <strong>Expires after:</strong>
+  <%= @scrap.expires_after %>
+</p>
+
+<p>
+  <strong>Expired at:</strong>
+  <%= @scrap.expired_at %>
+</p>
+
+<p>
+  <strong>Syntax:</strong>
+  <%= @scrap.syntax %>
+</p>
+
+<p>
+  <strong>Views:</strong>
+</p>
+
+<table>
+  <%- @scrap.scrap_views.each do |view| -%>
+  <tr>
+    <td><%= view.remote_ip %></td>
+    <td><%= view.user_agent %></td>
+    <td><%= view.viewed_at %></td>
+  </tr>
+  <%- end -%>
+</table>
+
+<%= link_to 'Edit', edit_scrap_path(@scrap) %> |
+<%= link_to 'Back', scraps_path %>

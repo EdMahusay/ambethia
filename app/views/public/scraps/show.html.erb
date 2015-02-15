@@ -1,0 +1,9 @@
+<%- if @scrap -%>
+    <%- if @scrap.expired_at? -%>
+        <p><strong>This page will expire <%= distance_of_time_in_words_to_now @scrap.expired_at %> from now.</strong></p>
+    <%- end -%>
+
+    <div id="scrap-body"><%== GitHub::Markdown.render_gfm(@scrap.body) %></div>
+<%- else -%>
+    <p><strong>This page has either expired, or it never existed.</strong></p>
+<%- end -%>

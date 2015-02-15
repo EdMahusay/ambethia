@@ -1,0 +1,29 @@
+<%= form_for(@scrap) do |f| %>
+  <% if @scrap.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scrap.errors.count, "error") %> prohibited this scrap from being saved:</h2>
+
+      <ul>
+      <% @scrap.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    <%= f.label :expires_after %><br>
+    <%= f.number_field :expires_after %>
+  </div>
+  <div class="field">
+    <%= f.label :syntax %><br>
+    <%= f.select :syntax, Scrap::SYNTAXES %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  slug: MyString
+  body: MyText
+  expires_after: 1
+  expired_at: 2015-02-14 20:07:06
+  syntax: MyString
+
+two:
+  user_id: 
+  slug: MyString
+  body: MyText
+  expires_after: 1
+  expired_at: 2015-02-14 20:07:06
+  syntax: MyString
