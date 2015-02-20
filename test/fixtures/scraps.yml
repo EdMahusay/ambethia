@@ -1,17 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user_id: 
-  slug: MyString
-  body: MyText
-  expires_after: 1
+simple_note:
+  user: ambethia
+  slug: 740ae1db663759c8
+  body: This is a simple note.
+  expires_after: 10
   expired_at: 2015-02-14 20:07:06
-  syntax: MyString
-
-two:
-  user_id: 
-  slug: MyString
-  body: MyText
-  expires_after: 1
-  expired_at: 2015-02-14 20:07:06
-  syntax: MyString
+  syntax: Markdown

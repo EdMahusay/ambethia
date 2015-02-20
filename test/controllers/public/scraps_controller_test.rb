@@ -1,9 +1,12 @@
 require 'test_helper'
 
 class Public::ScrapsControllerTest < ActionController::TestCase
-  test "should get show" do
-    get :show
-    assert_response :success
+  setup do
+    @scrap = scraps(:simple_note)
   end
 
+  test 'should get show' do
+    get :show, slug: @scrap.slug
+    assert_response :success
+  end
 end

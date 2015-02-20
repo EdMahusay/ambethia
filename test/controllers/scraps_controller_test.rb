@@ -1,8 +1,13 @@
 require 'test_helper'
 
 class ScrapsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
-    @scrap = scraps(:one)
+    @request.env["devise.mapping"] = Devise.mappings[:user]
+    @scrap = scraps(:simple_note)
+    @user = users(:ambethia)
+    sign_in(@user)
   end
 
   test "should get index" do

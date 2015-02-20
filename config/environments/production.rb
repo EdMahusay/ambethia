@@ -79,4 +79,6 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'ambethia.com' }
 
+  # React production variant (minified)
+  config.react.variant = :production
 end

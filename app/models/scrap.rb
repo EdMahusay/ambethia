@@ -4,7 +4,7 @@ class Scrap < ActiveRecord::Base
   scope :unexpired, -> { where('"scraps"."expired_at" IS NULL OR "scraps"."expired_at" > ?', Time.now) }
 
   belongs_to :user
-  has_many :scrap_views
+  has_many :scrap_views, :dependent => :destroy
 
   before_save :ensure_slug
 
