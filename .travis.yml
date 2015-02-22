@@ -9,9 +9,3 @@ addons:
       secure: X5A5M6n6y4ugH37Ggkepbl5S3UTYYU+sNr5MNrL1s2iKjAdlfh2sFeymqlaW9qnNS5uYuAExqhXcBa8L7pwxpcz5UWjyfU+8y6j+WGNrT/7mxMFQdVtEQP6+YqeKFv2Q1aL012TX387H6DHMUgYgDreT7B8JAijLLDp5VcNq7+4=
 before_script:
 - bundle exec rake db:create db:schema:load
-after_success:
-- gem install ninefold
-- if [[ $TRAVIS_SECURE_ENV_VARS ]]; then ninefold app redeploy --robot --sure; fi
-env:
-  global:
-    secure: Zz4qS/HQE3vIYUb07zOMn4NSWo4IQjTy+QPUNDSdnOu3tiXnKTBfPObGLRaU27Tu549fTFB+1+Ot31xL9mCABL8myQWpe9nbEZu6UqhUTT1W7IuP2xAiZMd0TcV/DeSGWHf0YWUQhia9CfSbTNl2yOmNDSXsj+0PEhhGe569Gxs=

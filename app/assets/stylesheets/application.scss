@@ -1,0 +1,115 @@
+@import "normalize";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "material_color";
+
+$primary-font-stack: "expo-sans-pro", sans-serif;
+$depth-size: 5px;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: $primary-font-stack;
+  background-color: color($blue-grey, 800);
+  color: white;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+body > header {
+  background-color: color($blue-grey, 900);
+  height: 50px;
+  width: 100%;
+  position: absolute;
+
+
+  h1 {
+    color: color($amber);
+    margin: 0 10px;
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+.session.panel {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjQjBCRUM1Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiNDRkQ4REMiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=");
+  border-bottom: $depth-size solid color($blue-grey, 400);
+  width: 300px;
+  margin: 0 auto;
+
+  header {
+    background-color: color($blue-grey, 600);
+    background-image: asset_url('panda.svg');
+    background-repeat: no-repeat;
+    background-position: 103% -0.5rem;
+    background-size: 3.5rem 3.5rem;
+    line-height: 40px;
+
+    h3 {
+      font-size: 20px;
+      color: color($blue-grey, 200);
+      margin: 0 10px
+    }
+  }
+
+  section {
+    padding: 10px;
+
+    div.text-field {
+      background-color: rgba(255,255,255,0.5);
+      color: color($grey, 800);
+      margin-bottom: 10px;
+
+      .icon-wrap {
+        text-align: center;
+        float: left;
+        width: 2rem;
+        line-height: 2rem;
+        color: color($blue-grey, 400);
+      }
+
+      .icon-wrap + .input-wrap {
+        margin-left: 2rem;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      input {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        border: none;
+        padding: 0;
+        width: 100%;
+        background-color: transparent;
+      }
+
+      input::placeholder {
+        text-transform: lowercase;
+        font-variant: small-caps;
+        font-size: 1rem;
+      }
+    }
+
+    a.button {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: lowercase;
+      font-variant: small-caps;
+      text-decoration: none;
+      display: inline-block;
+      background-color: color($lime);
+      color: white;
+      padding: 0.1rem 0.5rem 0.4rem;
+      border-bottom: $depth-size solid color($lime, 600);
+      text-shadow: 0px 0.15rem 0px rgba(150, 150, 150, 0.6);
+    }
+  }
+}

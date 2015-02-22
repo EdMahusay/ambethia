@@ -5,4 +5,3 @@ class Public::ScrapsController < ApplicationController
     @scrap.viewed(self) if @scrap
   end
 end
-

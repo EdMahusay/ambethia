@@ -4,12 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= content_for?(:title) ? yield(:title) : "Ambethia" %></title>
   <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "ambethia.com" %>">
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <script aync src="//use.typekit.net/bwx5odo.js" onload="try{Typekit.load();}catch(e){}"></script>
+  <%= stylesheet_link_tag    'public', media: 'all' %>
+  <%= javascript_include_tag 'public' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= yield %>
+  <%= yield %>
 </body>
 </html>

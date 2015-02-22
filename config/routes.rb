@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
 
   scope :a do
+    get '/', to: 'dashboard#index', as: 'dashboard'
     resources :scraps
   end
 

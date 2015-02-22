@@ -43,4 +43,6 @@ Rails.application.configure do
 
   # React development variant (unminified)
   config.react.variant = :development
+
+  config.middleware.use Rack::LiveReload
 end
