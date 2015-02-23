@@ -1,0 +1,53 @@
+@import "normalize";
+@import "material_color";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+$primary-font-stack: "expo-sans-pro", sans-serif;
+$depth-size: 5px;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: $primary-font-stack;
+  background-color: color($blue-grey, 800);
+  color: white;
+}
+
+div.modal, main.panel {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+div.modal {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+}
+
+body > header {
+  background-color: color($blue-grey, 900);
+  height: 50px;
+  width: 100%;
+  position: absolute;
+
+  h1 {
+    color: color($amber);
+    margin: 0 10px;
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

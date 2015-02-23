@@ -1,0 +1,32 @@
+<main class="panel">
+  <div class="session panel">
+    <header>
+      <h3>ようこそ</h3>
+    </header>
+    <section>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="text-field user">
+          <div class="icon-wrap"><%= icon :envelope %></div>
+          <div class="input-wrap">
+            <%= f.email_field :email, autofocus: true, placeholder: "Email Address" %>
+          </div>
+        </div>
+        <div class="text-field user">
+          <div class="icon-wrap"><%= icon :key %></div>
+          <div class="input-wrap">
+            <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+          </div>
+        </div>
+        <div class="actions">
+          <%= f.submit "Sign In" %>
+          <% if devise_mapping.rememberable? -%>
+            <div class="remember-me">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me, "Remember" %>
+            </div>
+          <% end -%>
+        </div>
+    <% end %>
+    </section>
+  </div>
+</main>

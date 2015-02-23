@@ -1,16 +1,3 @@
-@import "font-awesome-sprockets";
-@import "font-awesome";
-
-html{
-  height: 100%;
-}
-
-body {
-  min-height: 100%;
-  color: #77858C;
-  background-color: #3C3E3F;
-}
-
 #container {
   position: absolute;
   width: 100%;
@@ -43,6 +30,6 @@ body {
   color: #D3D98D;
 }
 
-a:link, a:visited, a:focus, a:hover, a:active {
+#ambethia a:link, #ambethia a:visited, #ambethia a:focus, #ambethia a:hover, #ambethia a:active {
   color: #77858C;
 }
