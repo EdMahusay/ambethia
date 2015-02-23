@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class Public::ScrapsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
     @scrap = scraps(:simple_note)
   end

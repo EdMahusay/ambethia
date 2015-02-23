@@ -5,10 +5,7 @@
 
 $primary-font-stack: "expo-sans-pro", sans-serif;
 $depth-size: 5px;
-
-html, body {
-  height: 100%;
-}
+$site-max-width: 1100px;
 
 body {
   font-family: $primary-font-stack;
@@ -19,28 +16,69 @@ body {
 div.modal, main.panel {
   display: flex;
   align-items: center;
-  height: 100%;
   width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
 }
 
 div.modal {
-  top: 0;
-  left: 0;
-  position: absolute;
   background-color: rgba(0,0,0,0.5);
+  z-index: 10001;
 }
 
-body > header {
-  background-color: color($blue-grey, 900);
-  height: 50px;
+#container {
+  margin-top: 4rem;
+}
+
+#container > header {
   width: 100%;
-  position: absolute;
+  top: 0;
+  position: fixed;
+  z-index: 10000;
+  border-bottom: 10px solid rgba(38, 50, 56, 0.5);
+
+  .header-wrap {
+    background-color: color($blue-grey, 900);
+    height: 3rem;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+  }
 
   h1 {
-    color: color($amber);
-    margin: 0 10px;
-    font-size: 30px;
-    line-height: 50px;
+    margin: 0;
+    font-size: 2rem;
+
+    a {
+      color: color($amber);
+      text-decoration: none;
+
+      &:hover {
+        color: color($amber, 300);
+      }
+    }
+  }
+
+  nav {
+    ul {
+      padding: 0;
+      list-style-type: none;
+
+      li a {
+        color: color($light-green);
+
+        &:hover {
+          color: color($light-green, 200);
+        }
+      }
+    }
   }
 }
 
@@ -49,5 +87,20 @@ body > header {
     content: "";
     display: block;
     clear: both;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+
+}
+
+@media only screen and (min-width: 961px) {
+  #container > header .header-container {
+    margin: 0 auto;
+    width: $site-max-width;
   }
 }
