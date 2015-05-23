@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.2'
 
 gem 'rails', '4.2.0'
 gem 'puma'
@@ -29,5 +30,6 @@ group :development, :test do
 end
 
 group :production do
+  gem 'rails_12factor'
   gem 'newrelic_rpm'
 end
